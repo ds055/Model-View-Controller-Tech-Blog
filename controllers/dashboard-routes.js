@@ -3,6 +3,8 @@ const { Post } = require('../models/');
 // TODO: Go to '../utils/auth' and complete middleware function
 const withAuth = require('../utils/auth');
 
+// /dashboard routes
+
 router.get('/', withAuth, async (req, res) => {
   try {
     // TODO: 1. Find all Posts for a logged in user (use the req.session.userId)

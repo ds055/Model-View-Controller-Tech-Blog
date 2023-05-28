@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Alucard's comment",
+        "body": "You probably wouldn't listen to me anyway, would you?",
+        "userId": 3, 
+        "postId": 1
+    },
+    {
+        "title": "Simon's comment",
+        "body": "Didn't you know my grandfather?",
+        "userId": 2,
+        "postId": 3
+    },
+    {
+        "title": "Richter's comment",
+        "body": "Hello, grandpappy.",
+        "userId": 1,
+        "postId": 2
+    }
+]

@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const { Post, Comment, User } = require('../models/');
 
+
+// / routes
+
 // get all posts for homepage
 router.get('/', async (req, res) => {
   try {
@@ -8,8 +11,17 @@ router.get('/', async (req, res) => {
     // TODO: 2. Serialize data (use .get() method, or use raw: true, nest: true in query options)
     // TODO: 3. Render the 'all-posts' template with the posts data
 
-    
+    const postData = await Post.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username']
+        }]
+    });
 
+    const posts = postData.map((post) => post.get({ plain: true}));
+    
+    res.render()
 
   } catch (err) {
     res.status(500).json(err);
