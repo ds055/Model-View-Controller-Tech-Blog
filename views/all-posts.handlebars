@@ -1,22 +1,23 @@
 <div class="menu-container">
   <div class="card-header col-md-10">
     <h2>
-      &#127869 Current Menu
+      All Posts
     </h2>
   </div>
   <!-- For each dish in the array of dish objects, the following <div> will be rendered. -->
   {{#each posts as |post|}}
     <div class="col-md-5">
-      <!-- We use dish.id instead of <od> and <li> elements. -->
       <p>
-        {{post.id}}.
-        {{dish.dish_name}}
+        {{format_date post.createdAt}}
       </p>
-    </div>
-    <div class="col-md-7">
       <p>
-        Guest:
-        {{dish.guest_name}}
+        {{post.id}}
+      </p>
+      <p>
+        {{post.body}}
+      </p>
+      <p>
+        --{{post.User.username}}.
       </p>
     </div>
   {{/each}}

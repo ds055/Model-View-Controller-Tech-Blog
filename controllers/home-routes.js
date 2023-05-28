@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Post, Comment, User } = require('../models/');
+const dateHelper = require('../utils/helpers')
 
 
 // / routes
@@ -20,8 +21,8 @@ router.get('/', async (req, res) => {
     });
 
     const posts = postData.map((post) => post.get({ plain: true}));
-    
-    res.render()
+
+    res.render('all-posts', { posts })
 
   } catch (err) {
     res.status(500).json(err);
