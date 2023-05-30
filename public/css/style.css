@@ -1,3 +1,4 @@
+
 #header {
   background-color: purple;
   color: white;
@@ -18,4 +19,13 @@
 
 main {
   background-color: rgb(212, 204, 109);
+}
+
+#post-card {
+  background-color: aquamarine;
+}
+
+#post-title {
+  border: 2px solid black;
+  background-color: rgb(210, 192, 192);
 }

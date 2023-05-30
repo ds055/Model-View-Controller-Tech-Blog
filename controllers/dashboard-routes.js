@@ -10,7 +10,7 @@ router.get('/', withAuth, async (req, res) => {
     // TODO: 1. Find all Posts for a logged in user (use the req.session.userId)
     // TODO: 2. Serialize data (use .get() method, or use raw: true, nest: true in query options)
     // TODO: 3. Render the 'all-posts-admin' template in the 'dashboard' layout with the posts data
-
+    
 
   } catch (err) {
     res.redirect('login');

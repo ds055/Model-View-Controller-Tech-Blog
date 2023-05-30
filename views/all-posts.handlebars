@@ -1,24 +1,26 @@
-<div class="menu-container">
-  <div class="card-header col-md-10">
+<div class="container">
+  <div class="d-flex justify-content-center">
     <h2>
       All Posts
     </h2>
   </div>
   <!-- For each dish in the array of dish objects, the following <div> will be rendered. -->
   {{#each posts as |post|}}
-    <div class="col-md-5">
-      <p>
-        {{format_date post.createdAt}}
-      </p>
-      <p>
-        {{post.id}}
-      </p>
-      <p>
-        {{post.body}}
-      </p>
-      <p>
-        --{{post.User.username}}.
-      </p>
+    <div class="d-flex justify-content-center">
+      <div id="post-card" class="col-8 border border-dark shadow mb-5 rounded">
+        <h3 id="post-title" class="ps-2">
+          {{post.title}}
+        </h3>
+        <p id="post-body" class="ps-3 pt-3">
+          {{post.body}}
+        </p>
+        <p id="post-username" class="text-end pe-5">
+          --{{post.User.username}}
+        </p>
+        <p id="post-date" class="text-end pe-5">
+          {{format_date post.createdAt}}
+        </p>
+      </div>
     </div>
   {{/each}}
 </div>
