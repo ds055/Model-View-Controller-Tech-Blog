@@ -1,13 +1,16 @@
 [
     {
+        "id": 1,
         "username": "richter",
         "password": "belmondo"
     },
     {
+        "id": 2,
         "username": "simon",
         "password": "belmondo"
     },
     {
+        "id": 3,
         "username": "alucard",
         "password": "tepes"
     }

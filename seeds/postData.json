@@ -1,15 +1,18 @@
 [
     {
+        "id": 1,
         "title": "Richter's post",
         "body": "I fought Drac most",
         "userId": 1
     },
     {
+        "id": 2,
         "title": "Simon's post",
         "body": "welp, I fought him first",
         "userId": 2
     },
     {
+        "id": 3,
         "title": "Alucard's post",
         "body": "Well. I'm his son.",
         "userId": 3

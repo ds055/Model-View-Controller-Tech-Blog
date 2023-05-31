@@ -7,11 +7,15 @@ const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
   try {
-    // TODO: 1. Find all Posts for a logged in user (use the req.session.userId)
-    // TODO: 2. Serialize data (use .get() method, or use raw: true, nest: true in query options)
-    // TODO: 3. Render the 'all-posts-admin' template in the 'dashboard' layout with the posts data
-    
+    const postData = await Post.findAll({
+      where: {userId: req.session.user_id}
+    });
 
+    const posts = postData.map((post) => post.get({ plain: true }));
+
+    console.log(posts)
+    
+    res.render('all-posts-admin', {posts, layout: 'dashboard'})
   } catch (err) {
     res.redirect('login');
   }
@@ -25,10 +29,11 @@ router.get('/new', withAuth, (req, res) => {
 
 router.get('/edit/:id', withAuth, async (req, res) => {
   try {
-    // TODO: 1. Find a Post by primary key
-    // TODO: 2. Serialize data (use .get() method, or use raw: true, nest: true in query options)
-    // TODO: 3. Render the 'edit-post' template in the 'dashboard' layout with the post data
+    const singlePostData = await Post.findByPk(req.params.id);
 
+    const post = singlePostData.get({ plain: true })
+
+    res.render('edit-post', {post, layout: 'dashboard'})
 
   } catch (err) {
     res.redirect('login');

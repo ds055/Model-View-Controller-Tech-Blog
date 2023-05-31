@@ -13,14 +13,14 @@ router.post('/', async (req, res) => {
     });
 
     // saves username and login status to session
-    req.session.save(() => {
-      req.session.user_id = newUser.
-      req.session.username = newUser.username;
-      req.session.loggedIn = true;
+    req.session.user_id = newUser.id;
+    req.session.username = newUser.username;
+    req.session.logged_in = true;
 
-      // respond with newUser data
+    req.session.save(() => {
       res.status(200).json(newUser.username)
     })
+
   } catch (err) {
     res.status(500).json(err);
   }
@@ -46,19 +46,19 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    req.session.save(() => {
-      req.session.username = user.username;
-      req.session.loggedIn = true;
-    })
+    req.session.username = user.username;
+    req.session.logged_in = true;
+    req.session.user_id = user.id;
+    req.session.save(() => res.json({ user, message: 'You are now logged in!' }))
 
-    res.json({ user, message: 'You are now logged in!' });
   } catch (err) {
     res.status(400).json({ message: 'No user account found!' });
   }
 });
 
 router.post('/logout', (req, res) => {
-  if (req.session.loggedIn) {
+  console.log(req.session)
+  if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
     });
@@ -66,5 +66,21 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
+router.post('/test', (req, res) => {
+  console.log(req.session)
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+
+
+    // req.session.save(() => {
+    //   req.session.username = "Dracula"
+    //   console.log(req.session.username)
+    // }
+      
+    // )
+});
+
 
 module.exports = router;
