@@ -1,7 +1,7 @@
     {{#each posts as |post|}}
     <a href="/dashboard/edit/{{post.id}}">
-        <div class="d-flex justify-content-center mt-5">
-        <div id="post-card" class="col-10 border border-dark shadow mb-5 rounded">
+        <div class="d-flex justify-content-center mt-3">
+        <div id="post-card" class="col-10 border border-dark shadow rounded">
             <div class="d-flex justify-content-between align-items-center" id="post-title">
             <h3 class="col-8 ps-1">
             {{post.title}}
@@ -15,7 +15,9 @@
     </a>
     {{/each}}
 
-<div class="d-flex justify-content-center pt-5">
-    <button id="new-post" class="rounded">+ New Post</button>
+<div class="d-flex justify-content-center pt-4">
+    <a href="/dashboard/new">
+        <button id="new-post" class="rounded">+ New Post</button>
+    </a>
 </div>
 

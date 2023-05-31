@@ -1,3 +1,17 @@
+/* global styling */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+}
+
+#sign-up-in{
+  font-size: calc(18px +.5vw);
+  font-weight: bold;
+}
 
 #header {
   background-color: purple;
@@ -40,15 +54,6 @@ label {
 
 /* all-posts-admin handlebar */
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  color: white;
-}
-
 #new-post:hover {
   background-color: rgb(170, 3, 170);
 }
@@ -59,4 +64,10 @@ a:hover {
 
 textarea {
   width: 70%;
+}
+
+/* single-post handlebar */
+
+#comment-box {
+  width: 90%;
 }

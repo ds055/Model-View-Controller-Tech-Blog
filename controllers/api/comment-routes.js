@@ -4,6 +4,7 @@ const withAuth = require('../../utils/auth');
 
 // /api/comment routes
 
+// creates a new comment, adding userId from the session
 router.post('/', withAuth, async (req, res) => {
   try {
     const newComment = await Comment.create({

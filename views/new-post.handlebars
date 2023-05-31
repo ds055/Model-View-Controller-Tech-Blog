@@ -1,0 +1,21 @@
+<form id="new-post-form" class="d-flex flex-column justify-content-center align-items-center mt-5">
+    <div id="post-card" class="col-10 border border-dark shadow rounded">
+        <div class="d-flex justify-content-between align-items-center mb-4" id="post-title">
+            <h3 class="p-2 col-8">Create New Post</h3>
+        </div>
+        <div>
+            <label class="ps-5 pe-3" for="title-box">Title:</label>
+            <br>
+            <input class="ms-5 m-2" id="title-box" name="post-title" type="text" placeholder="Your Title"> 
+            <br>
+            <label class="ps-5" for="content-box">Content:</label>
+            <br>
+            <textarea class="ms-5 me-5 mb-5" id="content-box" name="post-body" placeholder="Type your post here."></textarea>
+        </div>
+    </div>
+     <div class="d-flex justify-content-center mt-4 pb-5 align-items-center">
+            <input class="ms-4 rounded" type="submit" value="Submit">
+    </div>
+</form>
+
+<script src="/js/new.js"></script>
