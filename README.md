@@ -1,6 +1,6 @@
 # Model-View-Controller Tech blog
 
-[Link to website]()
+[Link to website](https://quiet-island-68230.herokuapp.com/)
 
 ## Description
 After creating an account on this short-form blogging site, users can create, edit, and delete their own posts while commenting on others'.
