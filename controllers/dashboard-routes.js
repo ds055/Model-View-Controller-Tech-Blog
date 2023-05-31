@@ -13,9 +13,7 @@ router.get('/', withAuth, async (req, res) => {
 
     const posts = postData.map((post) => post.get({ plain: true }));
 
-    console.log(posts)
-    
-    res.render('all-posts-admin', {posts, layout: 'dashboard'})
+    res.render('all-posts-admin', {posts, logged_in: req.session.logged_in, layout: 'dashboard'})
   } catch (err) {
     res.redirect('login');
   }

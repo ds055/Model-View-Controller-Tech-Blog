@@ -7,7 +7,7 @@
 #header a {
   color: white;
   text-decoration: none;
-  font-size: calc(18px + .5vw)
+  font-size: calc(18px + .5vw);
 }
 
 main {
@@ -30,4 +30,33 @@ main {
 label {
   font-size: calc(16px + .2vw);
   font-weight: bold;
+}
+
+#new-post {
+  background-color: purple;
+  color: white;
+  font-size: calc(16px + .5vw);
+}
+
+/* all-posts-admin handlebar */
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+}
+
+#new-post:hover {
+  background-color: rgb(170, 3, 170);
+}
+
+#new-post:active {
+  background-color: rgb(107, 4, 107);
+}
+
+textarea {
+  width: 70%;
 }
