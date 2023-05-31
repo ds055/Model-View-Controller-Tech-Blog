@@ -1,4 +1,4 @@
-/* global styling */
+/* -----global styling */
 a {
   text-decoration: none;
   color: black;
@@ -8,11 +8,30 @@ a:hover {
   color: white;
 }
 
-#sign-up-in{
-  font-size: calc(18px +.5vw);
+/* ----Basic card settings on most renderings*/
+#post-card {
+  background-color: aquamarine;
+}
+
+/* card titles */
+#post-title {
+  border: 2px solid black;
+  background-color: rgb(210, 192, 192);
+}
+
+/* username on cards */
+#post-username{
+  font-size:  calc(12px + .2vw); 
+}
+
+/* card labels */
+label {
+  font-size: calc(16px + .2vw);
   font-weight: bold;
 }
 
+/* ----dashboard and main handlebars */
+/* Titles and links in header and nav */
 #header {
   background-color: purple;
   color: white;
@@ -24,36 +43,26 @@ a:hover {
   font-size: calc(18px + .5vw);
 }
 
+/* main bg color */
 main {
   background-color: rgb(212, 204, 109);
 }
 
-#post-card {
-  background-color: aquamarine;
-}
-
-#post-title {
-  border: 2px solid black;
-  background-color: rgb(210, 192, 192);
-}
-
-#post-username{
-  font-size:  calc(12px + .2vw); 
-}
-
-label {
-  font-size: calc(16px + .2vw);
+/* ----login and signup handlebars */
+/* sign up and sign in text */
+#sign-up-in{
+  font-size: calc(18px +.5vw);
   font-weight: bold;
 }
 
+/* ----all-posts-admin handlebar */
 #new-post {
   background-color: purple;
   color: white;
   font-size: calc(16px + .5vw);
 }
 
-/* all-posts-admin handlebar */
-
+/* states for links */
 #new-post:hover {
   background-color: rgb(170, 3, 170);
 }
@@ -62,11 +71,12 @@ label {
   background-color: rgb(107, 4, 107);
 }
 
+/* text area for new posts */
 textarea {
   width: 70%;
 }
 
-/* single-post handlebar */
+/* ----single-post handlebar */
 
 #comment-box {
   width: 90%;

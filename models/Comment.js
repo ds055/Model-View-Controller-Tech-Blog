@@ -15,6 +15,7 @@ Comment.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    // creates foreign key based on id from User model
     userId: {
       type: DataTypes.INTEGER,
       references: {
@@ -22,6 +23,7 @@ Comment.init(
         key: 'id',
       }
     },
+    // creates foreign key based on id from Post model
     postId: {
       type: DataTypes.INTEGER,
       references: {
@@ -32,6 +34,7 @@ Comment.init(
   },
   {
     sequelize,
+    // timestamp data used when rendering page
     timestamps: true,
     freezeTableName: true,
     underscored: true, 

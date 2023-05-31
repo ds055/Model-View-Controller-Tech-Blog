@@ -1,10 +1,12 @@
+// logs user out by destroying session
 const logout = async function() {
-  console.log("hit")
+  // api call to destroy session
   const response = await fetch('/api/user/logout', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
   });
 
+  // on success, return to user to homepage
   if (response.ok) {
     document.location.replace('/');
   } else {
@@ -12,4 +14,5 @@ const logout = async function() {
   }
 };
 
+// event listener for logout link click
 document.querySelector('#logout-link').addEventListener('click', logout);

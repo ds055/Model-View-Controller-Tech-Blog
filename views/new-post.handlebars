@@ -1,3 +1,4 @@
+{{!-- form to create a new post --}}
 <form id="new-post-form" class="d-flex flex-column justify-content-center align-items-center mt-5">
     <div id="post-card" class="col-10 border border-dark shadow rounded">
         <div class="d-flex justify-content-between align-items-center mb-4" id="post-title">
@@ -13,9 +14,11 @@
             <textarea class="ms-5 me-5 mb-5" id="content-box" name="post-body" placeholder="Type your post here."></textarea>
         </div>
     </div>
-     <div class="d-flex justify-content-center mt-4 pb-5 align-items-center">
+    <div class="d-flex justify-content-center mt-4 pb-5 align-items-center">
+            {{!-- submit button --}}
             <input class="ms-4 rounded" type="submit" value="Submit">
     </div>
 </form>
 
+{{!-- new post js --}}
 <script src="/js/new.js"></script>

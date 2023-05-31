@@ -1,4 +1,6 @@
+{{!-- container --}}
 <div class="d-flex col-12 justify-content-center mt-5">
+    {{!-- card for login form --}}
     <div id="post-card" class="col-8 border border-dark shadow mb-5 rounded">
         <div class="d-flex justify-content-center" id="post-title">
             <h3>Log-In!</h3>
@@ -10,13 +12,14 @@
             <input class="mb-1" id="password-input-login" type="password">
             <input class="mt-4" type="submit" value="Submit">
         </form>
+        {{!-- link for new users to create account --}}
         <a id="sign-up-in" href="/signup">
             <div class="d-flex flex-column align-items-center ps-4 pe-4 pt-2 pb-4">
                 <span>New to the site?</span>
                 <span>Click here to sign-up!</span>
             </div>
         <a>
-
 </div>
 
+{{!-- log-in script --}}
 <script src="/js/login.js"></script>

@@ -22,6 +22,7 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false
     }, 
+    // foreign key based on id from User model
     userId: {
       type: DataTypes.INTEGER,
       references: {
@@ -32,6 +33,7 @@ Post.init(
   },
   {
     sequelize,
+    // timestamps passed to page 
     timestamps: true, 
     freezeTableName: true, 
     underscored: true,

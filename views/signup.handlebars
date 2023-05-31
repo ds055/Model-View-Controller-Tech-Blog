@@ -1,8 +1,10 @@
+{{!-- sign-up card --}}
 <div class="d-flex col-12 justify-content-center mt-5">
     <div id="post-card" class="col-8 border border-dark shadow mb-5 rounded">
         <div class="d-flex justify-content-center" id="post-title">
             <h3>Sign up!</h3>
         </div>
+        {{!-- form els --}}
         <form id="signup-form" class="d-flex flex-column align-items-center pt-3 pb-3">
             <label class="pb-2" for="username-input-signup">Username</label>
             <input id="username-input-signup" type="text">
@@ -10,7 +12,8 @@
             <input class="mb-1" id="password-input-signup" type="password">
             <input class="mt-4" type="submit" value="Submit">
         </form>
-         <a id="sign-up-in" href="/login">
+        {{!-- link for users who already have an account --}}
+        <a id="sign-up-in" href="/login">
             <div class="d-flex flex-column align-items-center ps-4 pe-4 pt-2 pb-4">
                 <span>Already have an account?</span>
                 <span>Click here to login!</span>
@@ -18,4 +21,5 @@
         <a>
 </div>
 
+{{!-- sign up js --}}
 <script src="/js/signup.js"></script>
